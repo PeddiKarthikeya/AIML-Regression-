@@ -23,6 +23,5 @@ Predicted Values: Adds predicted Y values to the dataset.
 
 Plot: Generates a scatter plot with a fitted regression line.
 
-License
-
+License:
 This project is open-source under the MIT License.
