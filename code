@@ -1,0 +1,19 @@
+#7)SimpleLinerarRegression
+library(ggplot2)
+data <- data.frame(
+  X = c(1, 2, 3, 4, 5),
+  Y = c(2, 4, 5, 4, 6)
+)
+cat("Original Data:\n")
+print(data)
+model <- lm(Y ~ X, data = data)
+cat("Model Summary:\n")
+print(summary(model))
+data$Predicted_Y <- predict(model, newdata = data)
+cat("Data with Predicted Values:\n")
+print(data)
+ggplot(data, aes(x = X, y = Y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  labs(title = "Simple Linear Regression", x = "X", y = "Y") +
+  theme_minimal()
